@@ -22,7 +22,9 @@ pub fn expiration(timestamp: String) -> Duration {
 
     let ts = timestamp.parse::<DateTime<Utc>>();
 
-    now.signed_duration_since(ts.unwrap())
+    let duration_since = now.signed_duration_since(ts.unwrap());
+
+    Duration::milliseconds(duration_since.num_milliseconds())
 }
 
 // Decode initial bytes of buffer as ASN and return the length of the encoded structure.
