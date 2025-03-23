@@ -1,5 +1,5 @@
 [package]
-name = "u2f"
+name = "u2f-hatter-fork"
 version = "0.2.0"
 authors = ["Flavio Oliveira <flavio@wisespace.io>"]
 
